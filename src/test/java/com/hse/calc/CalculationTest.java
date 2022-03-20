@@ -95,10 +95,22 @@ public class CalculationTest {
     }
 
     @Test
-    public void testGetAnswer14FinalTest() {
+    public void testGetAnswer14FinalCorrectTest() {
         System.out.println("((-1/3*3/4-1/2)*2/1):(-1/-5+(-6/7))=105/46");
         assertEquals("105/46",
                 Calculation.getAnswer("((-1/3*3/4-1/2)*2/1):(-1/-5+(-6/7))"));
+    }
+
+    @Test
+    public void testGetAnswer15ZeroInDenominator() {
+        System.out.println("45/0 + 56/234");
+        assertNull(Calculation.getAnswer("45/0+56/234"));
+    }
+
+    @Test
+    public void testGetAnswer16ZeroAfterDivision() {
+        System.out.println("3/4 : 0/6");
+        assertNull(Calculation.getAnswer("3/4 : 0/6"));
     }
 
     @Test
