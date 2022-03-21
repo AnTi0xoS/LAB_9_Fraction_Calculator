@@ -6,7 +6,7 @@ import java.util.Stack;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public interface Calculation {
+interface Calculation {
 
     static void greetings() {
         System.out.print("""
@@ -26,11 +26,11 @@ public interface Calculation {
                     - для завершения работы введите 'quit'
                     Пример ввода: ((-1/3 * 3/ 4 - 1/2)*2 / 1)  :(- 1/-5 + ( -6/7 ) )
                 """);
-        System.out.print("\nВведите выражение: ");
     }
 
     static void startWork() {
         Scanner in = new Scanner(System.in);
+        System.out.print("\nВведите выражение: ");
         String expression = in.nextLine();
         while (true) {
             if (Objects.equals(expression, "quit")) {
