@@ -71,7 +71,7 @@ interface Calculation {
             userInput = userInput.replace(" ", "");
         }
         Pattern correctInputPattern = Pattern.compile("((([-]?[(]*([-]?\\d+)/([-]?\\d+)[+*:-][(]*)+|" +
-                "([-]?[(]*([-]?d+)/([-]?\\d+)[)]*)+)(([+*:-]?([-]?\\d+)/([-]?\\d+))[)]*[+*:-]?)*)+");
+                "([-]?[(]*([-]?\\d+)/([-]?\\d+)[)]*)+)(([+*:-]?([-]?\\d+)/([-]?\\d+))[)]*[+*:-]?)*)+");
         Matcher correctInputMatcher = correctInputPattern.matcher(userInput);
         if (!(correctInputMatcher.matches())) return null;
         int bracketCount = 0;
